@@ -9,7 +9,7 @@
   <logger name="org.mortbay.log" level="info" />
   <logger name="com.mchange" level="warn" />
 
-  <root level="debug">
+  <root level="warn">
     <appender-ref ref="STDOUT" />
   </root>
 </configuration>

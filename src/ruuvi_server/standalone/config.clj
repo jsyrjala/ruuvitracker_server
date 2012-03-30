@@ -12,16 +12,10 @@
      :subprotocol "postgresql"
      :user "ruuvi"
      :password "ruuvi"
-     :subname "//localhost/ruuvi_server"})
+     :subname "//localhost/ruuvi_server"
+     :connection-pool-factory create-bonecp-connection-pool
+     })
   (def *server-port* 8080)
-
-  (defn- db-with-connection-pool [spec]
-    (let [engine-conf (postgres spec)]
-      (defonce db {:pool (create-connection-pool spec)
-                   :options (conf/extract-options engine-conf)})
-      (default-connection db)
-      )
-    )
 
   (def max-threads 80)
   (defdb db (postgres *database-config*))

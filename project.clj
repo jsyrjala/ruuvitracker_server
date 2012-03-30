@@ -23,8 +23,9 @@
    ;; database
    [postgresql/postgresql "8.4-702.jdbc4"]
    [org.apache.tomcat/tomcat-jdbc "7.0.25"]
+   [com.jolbox/bonecp "0.7.1.RELEASE"]
    [org.clojure/java.jdbc "0.1.3"]
-   [korma "0.3.0-beta9" :exclusions [log4j/log4j] ]
+   [korma "0.3.0-SNAPSHOT" :exclusions [log4j/log4j] ]
    [lobos "0.8.0"]
    ]
   :dev-dependencies
